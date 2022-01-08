@@ -1,0 +1,128 @@
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.background {
+  width: 100%;
+  height: 100vh;
+  background: hsla(217, 100%, 50%, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 255, 136, 0.651) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 600px;
+  height: 400px;
+  background-color: gray;
+  border-radius: 100px;
+  position: relative;
+  background-color: #ffff;
+  box-shadow: inset -24px -24px 48px rgba(0, 255, 136, 0.486),
+    inset 12px 12px 24px rgba(0, 255, 136, 0.281),
+    24px 24px 48px rgba(24, 105, 67, 0.479);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-section {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+.btn {
+  width: 50%;
+  padding: 20px;
+  margin-top: 50px;
+  border: none;
+  background: rgba(17, 247, 139, 0.918);
+  border-radius: 22px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  box-shadow: inset -12px -12px 24px rgba(0, 131, 70, 0.747),
+    inset 6px 6px 12px rgba(1, 158, 85, 0.226),
+    0px 13px 24px rgba(1, 158, 85, 0.61);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn:hover {
+  animation: btnAnimation 0.6s ease forward;
+}
+
+@keyframes btnAnimation {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+
+  70% {
+    transform: scale(1.7);
+  }
+
+  100% {
+    transform: scale(2);
+  }
+}
+
+.img-container {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  bottom: 35px;
+  left: 80px;
+  transform: rotate(150deg);
+  z-index: 2;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.img-container::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  position: absolute;
+  top: 45px;
+  left: -3px;
+  background-color: rgb(0 221 118);
+  z-index: -1;
+  filter: blur(3.5px);
+}
+
+.img-container::before {
+  content: "";
+  width: 80%;
+  height: 80%;
+  border-radius: 100%;
+  position: absolute;
+  top: 45px;
+  left: -3px;
+  background-color: rgb(0 2 118);
+  z-index: -1;
+  /* filter: blur(3.5px); */
+}
